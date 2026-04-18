@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 10 Beautiful Women</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #ffe6f0, #f9f9ff);
+        color: #333;
+        overflow-x: hidden;
+      }
+      header {
+        text-align: center;
+        padding: 40px 20px;
+      }
+      header h1 {
+        font-size: 2.5em;
+        color: #ff4da6;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+      }
+      .card {
+        position: relative;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        overflow: hidden;
+      }
+      .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+      .card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .rank {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ff4da6;
+      }
+      .name {
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+      .highlight {
+        border: 2px solid #ff4da6;
+        background: #fff0f7;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #888;
+      }
+
+      /* Сердечки */
+      .heart {
+        position: absolute;
+        color: #ff4da6;
+        font-size: 16px;
+        animation: floatUp 1.5s ease forwards;
+        pointer-events: none;
+      }
+
+      @keyframes floatUp {
+        0% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-80px) scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🌸 Top 10 самых красивых девушек в мире 🌸</h1>
+      <p>Особенный рейтинг ❤️</p>
+    </header>
+
+    <div class="container">
+      <div class="card highlight">
+        <div class="rank">#1</div>
+        <img src="fatima500.jpg" alt="Fatima" />
+        <div>
+          <div class="name">Talgarqyzy Fatima 💖</div>
+          <p>Самая красивая, нежная и особенная ✨</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#2</div>
+        <img src="Margot Robbie500.jpg" />
+        <div class="name">Margot Robbie</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#3</div>
+        <img src="Ana de Armas (1).jpg" />
+        <div class="name">Ana de Armas</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#4</div>
+        <img src="Scarlett Johansson (1).jpg" />
+        <div class="name">Scarlett Johansson</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#5</div>
+        <img src="Angelina Jolie (1).jpg" />
+        <div class="name">Angelina Jolie</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#6</div>
+        <img src="Monica Bellucci (1).jpg" />
+        <div class="name">Monica Bellucci</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#7</div>
+        <img src="Aishwarya Rai (1).jpg" />
+        <div class="name">Aishwarya Rai</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#8</div>
+        <img src="Adriana Lima (1).jpg" />
+        <div class="name">Adriana Lima</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#9</div>
+        <img src="Bella Hadid (1).jpg" />
+        <div class="name">Bella Hadid</div>
+      </div>
+
+      <div class="card">
+        <div class="rank">#10</div>
+        <img src="Deepika Padukone (1).jpg" />
+        <div class="name">Deepika Padukone</div>
+      </div>
+    </div>
+
+    <footer>Сделано с ❤️ специально для тебя</footer>
+
+    <script>
+      // Эффект сердечек при наведении
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          for (let i = 0; i < 6; i++) {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.top = "70%";
+            heart.style.fontSize = 12 + Math.random() * 10 + "px";
+            card.appendChild(heart);
+
+            setTimeout(() => {
+              heart.remove();
+            }, 1500);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
